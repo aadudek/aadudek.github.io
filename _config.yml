@@ -2,6 +2,8 @@ title: Aleksandra Dudek
 description: Personal website
 markdown: kramdown
 theme: minimal
+url: "https://aadudek.github.io"
+baseurl: ""
 
 header_pages:
   - index.html
