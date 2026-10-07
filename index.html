@@ -4,26 +4,49 @@ title: Home
 permalink: /
 ---
 
-<p>
-  <!-- Headshot: drop an image file into assets/images/ and update the src below -->
-  <img src="assets/images/headshot.jpg" alt="Headshot" width="200">
-</p>
+<div class="about">
+  <img src="assets/images/headshot.jpg" alt="Headshot" class="profile-pic">
+  <p>
+    I am a 4th year graduate student at the University of Michigan in the Department of Mechanical Engineering.
+    I am co-advised by Dr. Kira Barton in the <a href="https://brg.engin.umich.edu/">Barton Research Group</a> and Dr. Chris Vermillion in the Control and Optimization for Renewables and Energy Efficiency <a href="https://corelab.engin.umich.edu/">(CORE) lab</a>.
+    I got my B.S. in mechanical engineering from UCLA.
+    My goal is to develop assistive autonomous systems that adapt their support in real time to the person that they are working with while balancing energetic costs and time-varying dynamics.
 
-<p>
-  I am a 4th year graduate student at the University of Michigan in the Department of Mechanical Engineering.
-  I am co-advised by Dr. Kira Barton in the <a href="https://brg.engin.umich.edu/">Barton Research Group</a> and Dr. Chris Vermillion in the Control and Optimization for Renewables and Energy Efficiency <a href="https://corelab.engin.umich.edu/">(CORE) lab</a> . 
-  I got my B.S. in mechanical engineering from UCLA. 
-  My goal is to my goal is to develop assistive autonomous systems that adapt their support in real time to the person that they are working with while balancing energetic costs and time-varying dynamics.  
-  
-  When I'm not in the lab or in a lecture hall, I like to be outside running, biking, and exploring!
-</p>
+    When I'm not in the lab or in a lecture hall, I like to be outside running, biking, and exploring!
+  </p>
+</div>
+
+<style>
+  .about {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+  }
+
+  .profile-pic {
+    width: 220px;
+    height: auto;
+    border-radius: 12px;
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 700px) {
+    .about {
+      flex-direction: column;
+    }
+  }
+</style>
 
 <h2>Background</h2>
 <ul>
   <li><strong>University of Michigan, Ann Arbor:</strong> Ph.D. candidate in Mechanical Engineering, expected 2028</li>
   <li><strong>University of Michigan, Ann Arbor:</strong> M.S. in Mechanical Engineering, 2025</li>
   <li><strong>University of California, Los Angeles:</strong> B.S. in Mechanical Engineering, 2023</li>
-  <!-- Experience: add each place you've worked as its own list item -->
+</ul>
+
+<h2>Experience</h2>
+<ul>
   <li><strong>Stryker Neurovascular:</strong> Research & Development Intern, Summer 2022</li>
   <li><strong>Tesla:</strong> Mechanical Design Engineering Intern, Winter 2022</li>
   <li><strong>Stryker Endoscopy:</strong> Advanced Operations (Manufacturing Engineering) Intern, Summer 2021</li>
