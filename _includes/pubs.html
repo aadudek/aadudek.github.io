@@ -1,0 +1,23 @@
+{% comment %} Lists papers from _data/publications.yml whose topic matches include.topic {% endcomment %}
+{% assign pubs = site.data.publications | where: "topic", include.topic %}
+{% if pubs.size > 0 %}
+<div class="pubs">
+  <strong>Publications</strong>
+  {% for pub in pubs %}
+  <p class="pub">
+    <span class="pub-title">{{ pub.title }}</span>
+    <br>
+    {{ pub.authors }}
+    <br>
+    <em>{{ pub.venue }}</em>, {{ pub.year }}
+    {% if pub.paper %} / <a href="{{ pub.paper }}">paper</a>{% endif %}
+    {% if pub.abstract %} / <a href="{{ pub.abstract }}">abstract</a>{% endif %}
+    {% if pub.doi %} / <a href="{{ pub.doi }}">paper</a>{% endif %}
+    {% if pub.code %} / <a href="{{ pub.code }}">code</a>{% endif %}
+    {% if pub.video %} / <a href="{{ pub.video }}">video</a>{% endif %}
+    {% if pub.slides %} / <a href="{{ pub.slides }}">slides</a>{% endif %}
+    {% if pub.poster %} / <a href="{{ pub.poster }}">poster</a>{% endif %}
+  </p>
+  {% endfor %}
+</div>
+{% endif %}

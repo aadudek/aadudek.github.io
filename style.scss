@@ -136,3 +136,23 @@ ul.plain li {
     max-width: 220px;
   }
 }
+
+/* Entries in Industry, Teaching and Education */
+.entry {
+  margin: 1em 0;
+}
+
+/* Publications listed under each research topic */
+.pubs {
+  margin-top: 0.8em;
+}
+
+p.pub {
+  margin: 0.5em 0 0.8em 0;
+  padding-left: 0.8em;
+  border-left: 2px solid #ddd;
+}
+
+.pub-title {
+  font-style: italic;
+}
