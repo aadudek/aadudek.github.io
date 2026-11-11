@@ -1,59 +1,188 @@
 ---
-layout: page
+layout: default
 title: Home
 permalink: /
 ---
 
-<div class="about">
-  <img src="assets/images/headshot.jpg" alt="Headshot" class="profile-pic">
-  <p>
-    I am a 4th year graduate student at the University of Michigan in the Department of Mechanical Engineering.
-    I am co-advised by Dr. Kira Barton in the <a href="https://brg.engin.umich.edu/">Barton Research Group</a> and Dr. Chris Vermillion in the Control and Optimization for Renewables and Energy Efficiency <a href="https://corelab.engin.umich.edu/">(CORE) lab</a>.
-    I got my B.S. in mechanical engineering from UCLA.
-    My goal is to develop assistive autonomous systems that adapt their support in real time to the person that they are working with while balancing energetic costs and time-varying dynamics.
+<!-- Header: name, bio, links, photo -->
+<table class="section">
+  <tr style="padding:0px" class="header-row">
+    <td style="padding:2.5%;width:60%;vertical-align:middle">
+      <h1>Aleksandra Dudek</h1>
+      <p>
+        I am a 4th year graduate student in the Department of <a href="https://me.engin.umich.edu/">Mechanical Engineering</a> at the <a href="https://umich.edu/">University of Michigan</a>.
+        I am co-advised by <a href="https://brg.engin.umich.edu/">Kira Barton</a> in the Barton Research Group and <a href="https://corelab.engin.umich.edu/">Chris Vermillion</a> in the Control and Optimization for Renewables and Energy Efficiency (CORE) lab.
+      </p>
+      <p>
+        My goal is to develop assistive autonomous systems that adapt their support in real time to the person that they are working with while balancing energetic costs and time-varying dynamics.
+      </p>
+      <p>
+        I have a BS in Mechanical Engineering from <a href="https://www.ucla.edu/">UCLA</a>. When I'm not in the lab or in a lecture hall, I like to be outside running, biking, and exploring!
+      </p>
+      <p style="text-align:center">
+        <a href="#research">Research</a> &nbsp;/&nbsp;
+        <a href="#publications">Publications</a> &nbsp;/&nbsp;
+        <a href="#teaching">Teaching</a> &nbsp;/&nbsp;
+        <a href="#outreach">Outreach</a>
+      </p>
+    </td>
+    <td class="profile-cell" style="padding:2.5%;width:40%;max-width:40%">
+      <img class="profile-photo" alt="profile photo" src="assets/images/tn/headshot.jpg">
+    </td>
+  </tr>
+</table>
 
-    When I'm not in the lab or in a lecture hall, I like to be outside running, biking, and exploring!
-  </p>
-</div>
+<!-- Research -->
+<table class="section" id="research">
+  <tr>
+    <td class="full">
+      <h2>Research</h2>
+      <p>
+        My research focuses on how autonomous systems can better understand and adapt to the people they are working with.
+      </p>
+    </td>
+  </tr>
+</table>
+<table class="section">
+  <tr>
+    <td class="thumb"></td>
+    <td class="desc">
+      <h3>Exoskeleton Control</h3>
+      <br>
+      <em>Ongoing</em>
+      <p>
+        More recently my work has shifted to lower limb exoskeleton systems. Here I am developing control strategies that consider how people's needs change with fatigue. Stay tuned for updates!
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td class="thumb">
+      <img src="assets/images/tn/drivingSim.jpg" alt="Driver-in-the-loop simulator">
+    </td>
+    <td class="desc">
+      <h3>Adaptive Driver Training for Semi-Autonomous Vehicles</h3>
+      <br>
+      <a href="https://repository.lsu.edu/cgi/viewcontent.cgi?article=1079&context=lsu_control">abstract</a>
+      <p>
+        I developed a paradigm to better prepare drivers to take over an autonomous vehicle in the presence of an obstacle that the autonomy fails to perceive.
+        We iterated on various ways to estimate model parameters online. In a user study, adaptive training produced a 20% reduction in take-over variability between users compared to the baseline protocol.
+        This work has been submitted to IEEE Transactions on Human-Machine Systems.
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td class="thumb">
+      <img src="assets/images/tn/drivingSim.jpg" alt="Driver-in-the-loop simulator">
+    </td>
+    <td class="desc">
+      <h3>Game-Theoretic Modeling of Human-Autonomy Teaming</h3>
+      <br>
+      <a href="https://ieeexplore.ieee.org/abstract/document/11108032">instructions</a> /
+      <a href="https://ieeexplore.ieee.org/document/11616352">control weighting</a> /
+      <a href="https://ieeexplore.ieee.org/document/11151407">adaptive arbitration</a>
+      <p>
+        My initial work sought to develop a theoretically grounded method to characterize human behavior (i.e., cognitive, high-level behavior) in shared control human-autonomy teams.
+        We considered how collaboration strategies change based on the instructions that the person was provided and the relative weighting of the shared control between the human and the autonomy.
+        We further studied how the autonomy can learn to adjust the sharing of control between the human and the autonomy over repeated iterations.
+      </p>
+    </td>
+  </tr>
+</table>
+<br>
 
-<style>
-  .about {
-    display: flex;
-    align-items: flex-start;
-    gap: 1.5rem;
-    margin: 1.5rem 0;
-  }
+<!-- Publications -->
+<table class="section" id="publications">
+  <tr>
+    <td class="full">
+      <h2>Publications</h2>
+    </td>
+  </tr>
+</table>
+<table class="section">
+  {% for pub in site.data.publications %}
+  <tr>
+    <td class="thumb">
+      {% if pub.image %}<img src="{{ pub.image | relative_url }}" alt="project image">{% endif %}
+    </td>
+    <td class="desc">
+      <h3>{{ pub.title }}</h3>
+      <br>
+      {{ pub.authors }}
+      <br>
+      <em>{{ pub.venue }}</em>, {{ pub.year }}
+      <br>
+      {% if pub.paper %}<a href="{{ pub.paper }}">paper</a> /{% endif %}
+      {% if pub.abstract %}<a href="{{ pub.abstract }}">abstract</a> /{% endif %}
+      {% if pub.doi %}<a href="{{ pub.doi }}">doi</a> /{% endif %}
+      {% if pub.code %}<a href="{{ pub.code }}">code</a> /{% endif %}
+      {% if pub.video %}<a href="{{ pub.video }}">video</a> /{% endif %}
+      {% if pub.slides %}<a href="{{ pub.slides }}">slides</a> /{% endif %}
+      {% if pub.poster %}<a href="{{ pub.poster }}">poster</a> /{% endif %}
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+<br>
 
-  .profile-pic {
-    width: 220px;
-    height: auto;
-    border-radius: 12px;
-    flex-shrink: 0;
-  }
+<!-- Teaching -->
+<table class="section" id="teaching">
+  <tr>
+    <td class="full">
+      <h2>Teaching</h2>
+    </td>
+  </tr>
+</table>
+<table class="section">
+  <tr>
+    <td class="full" style="padding-top:0">
+      <div style="margin:1em 0">
+        <h3>ME 461: Automatic Control</h3> &mdash; <em>Graduate Student Instructor, Fall 2026</em>
+        <br>
+        I lead office hours and create homework problems with solutions.
+      </div>
+      <div style="margin:1em 0">
+        <h3>ME 360: Modeling, Analysis, and Control of Dynamic Systems</h3> &mdash; <em>Guest Lecturer, Winter 2026</em>
+      </div>
+      <div style="margin:1em 0">
+        <h3>ME 599: Applied Optimal Control</h3> &mdash; <em>Guest Lecturer, Fall 2024</em>
+      </div>
+    </td>
+  </tr>
+</table>
+<br>
 
-  @media (max-width: 700px) {
-    .about {
-      flex-direction: column;
-    }
-  }
-</style>
+<!-- Background & Experience -->
+<table class="section">
+  <tr>
+    <td class="full" style="width:50%;vertical-align:top">
+      <h2>Education</h2>
+      <ul class="plain">
+        <li><strong>University of Michigan</strong><br>Ph.D. in Mechanical Engineering, expected 2028</li>
+        <li><strong>University of Michigan</strong><br>M.S. in Mechanical Engineering, 2025</li>
+        <li><strong>University of California, Los Angeles</strong><br>B.S. in Mechanical Engineering, 2023</li>
+      </ul>
+    </td>
+    <td class="full" style="width:50%;vertical-align:top">
+      <h2>Experience</h2>
+      <ul class="plain">
+        <li><strong>Stryker Neurovascular</strong><br>Research &amp; Development Intern, Summer 2022</li>
+        <li><strong>Tesla</strong><br>Mechanical Design Engineering Intern, Winter 2022</li>
+        <li><strong>Stryker Endoscopy</strong><br>Advanced Operations (Manufacturing Engineering) Intern, Summer 2021</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+<br>
 
-<h2>Background</h2>
-<ul>
-  <li><strong>University of Michigan, Ann Arbor:</strong> Ph.D. candidate in Mechanical Engineering, expected 2028</li>
-  <li><strong>University of Michigan, Ann Arbor:</strong> M.S. in Mechanical Engineering, 2025</li>
-  <li><strong>University of California, Los Angeles:</strong> B.S. in Mechanical Engineering, 2023</li>
-</ul>
-
-<h2>Experience</h2>
-<ul>
-  <li><strong>Stryker Neurovascular:</strong> Research & Development Intern, Summer 2022</li>
-  <li><strong>Tesla:</strong> Mechanical Design Engineering Intern, Winter 2022</li>
-  <li><strong>Stryker Endoscopy:</strong> Advanced Operations (Manufacturing Engineering) Intern, Summer 2021</li>
-
-</ul>
-
-<h2>Contact</h2>
-<p>
-  <!-- Email: <a href="mailto:aadudek@umich.edu">aadudek@umich.edu</a> -->
-</p>
+<!-- Outreach -->
+<table class="section" id="outreach">
+  <tr>
+    <td class="full">
+      <h2>Outreach</h2>
+      <ul class="plain">
+        <li><strong>Safehouse Center:</strong> I volunteer at the Safehouse Center, a domestic violence shelter in Ann Arbor, MI.</li>
+        <li><strong>Mechanical Engineering Graduate Council:</strong> Co-President 2024&ndash;2026; I continue to help as a member of the social committee.</li>
+      </ul>
+    </td>
+  </tr>
+</table>

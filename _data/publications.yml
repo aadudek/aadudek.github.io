@@ -1,0 +1,36 @@
+# Publications, newest first. Each entry renders as one row on the home page.
+# Optional link fields: paper, abstract, doi, code, video, slides, poster
+
+- title: "Characterization of Modes of Human-Autonomy Team Behavior Using the Distance to Generalized Nash Equilibria in Shared Vehicle Control"
+  authors: "<strong>A. Dudek</strong>, N. Naidja, S. James, M. Castanier, S. Pechberti, M. C. Rahal, C. Vermillion, K. Barton"
+  venue: "American Control Conference (ACC)"
+  year: 2026
+  image: /assets/images/tn/drivingSim.jpg
+  paper: https://ieeexplore.ieee.org/document/11616352
+
+- title: "Towards Adaptive Driver Training: Online Estimation of Dual-Task Performance Model Parameters"
+  authors: "<strong>A. Dudek</strong>, P. Linford, Z. Yu, S. James, M. Castanier, C. Vermillion, K. Barton"
+  venue: "Abstract"
+  year: 2026
+  image: /assets/images/tn/drivingSim.jpg
+  abstract: https://repository.lsu.edu/cgi/viewcontent.cgi?article=1079&context=lsu_control
+
+- title: "Iterative Learning-Based Arbitration in Shared Vehicle Control: Methodological Formulation and Driver-in-the-Loop Results"
+  authors: "Z. Yu, <strong>A. Dudek</strong>, P. Linford, I. Holbrook, S. James, M. Castanier, K. Barton, C. Vermillion"
+  venue: "IEEE Conference on Control Technology and Applications (CCTA)"
+  year: 2025
+  image: /assets/images/tn/drivingSim.jpg
+  paper: https://ieeexplore.ieee.org/document/11151407
+
+- title: "Characterization of Human Driving Behaviors in Shared Vehicle Control Based on Level-k Cognitive Modeling"
+  authors: "<strong>A. Dudek</strong>, P. Linford, I. Holbrook, S. James, M. Castanier, C. Vermillion, K. Barton"
+  venue: "American Control Conference (ACC)"
+  year: 2025
+  image: /assets/images/tn/drivingSim.jpg
+  paper: https://ieeexplore.ieee.org/abstract/document/11108032
+
+- title: "Highly Fluorescent Copper Nanoclusters for Sensing and Bioimaging"
+  authors: "Y. An, Y. Ren, M. Bick, <strong>A. Dudek</strong>, E. Hong-Wang Waworuntu, T. Jing, C. Jun, B. Chang"
+  venue: "Biosensors and Bioelectronics, 154, 112078"
+  year: 2020
+  doi: https://doi.org/10.1016/j.bios.2020.112078

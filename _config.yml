@@ -1,12 +1,14 @@
+name: Aleksandra Dudek
 title: Aleksandra Dudek
-description: Personal website
 markdown: kramdown
-theme: minima
 url: "https://aadudek.github.io"
 baseurl: ""
 
-header_pages:
-  - index.html
-  - research.html
-  - teaching.html
-  - outreach.html
+kramdown:
+  input: GFM
+
+sass:
+  style: compressed
+
+exclude:
+  - README.md

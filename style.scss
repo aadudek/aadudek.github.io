@@ -1,0 +1,138 @@
+---
+---
+
+/* Styles adapted from https://github.com/leonidk/leonidk.github.io */
+
+a {
+  color: #1772d0;
+  text-decoration: none;
+}
+
+a:focus,
+a:hover {
+  color: #f09228;
+  text-decoration: none;
+}
+
+body,
+td,
+th,
+tr,
+p,
+a,
+li {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 14px;
+  font-display: auto;
+}
+
+strong {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+h1 {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 32px;
+  font-weight: normal;
+  text-align: center;
+  padding: 0px;
+  margin: 14px 0px;
+}
+
+h2 {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 22px;
+  font-weight: normal;
+  padding: 0px;
+  margin: 0px;
+  display: inline;
+}
+
+h3 {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 0px;
+  margin: 0px;
+  display: inline;
+}
+
+/* Layout tables, matching the reference site's inline table styles */
+table.page {
+  width: 100%;
+  max-width: 800px;
+  border: 0px;
+  border-spacing: 0px;
+  border-collapse: separate;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+table.section {
+  width: 100%;
+  border: 0px;
+  border-spacing: 0px;
+  border-collapse: separate;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+td.full {
+  padding: 2.5%;
+  width: 100%;
+  vertical-align: middle;
+}
+
+td.thumb {
+  padding: 2.5%;
+  width: 25%;
+  vertical-align: middle;
+  min-width: 120px;
+}
+
+td.thumb img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+
+td.desc {
+  padding: 2.5%;
+  width: 75%;
+  vertical-align: middle;
+}
+
+.profile-photo {
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: 50% 30%;
+  border-radius: 50%;
+}
+
+ul.plain {
+  margin: 0.5em 0;
+  padding-left: 1.2em;
+}
+
+ul.plain li {
+  margin-bottom: 0.4em;
+}
+
+/* Stack the header photo under the bio on narrow screens */
+@media screen and (max-width: 600px) {
+  .header-row td {
+    display: block;
+    width: 95% !important;
+  }
+
+  .header-row .profile-cell {
+    text-align: center;
+  }
+
+  .profile-photo {
+    max-width: 220px;
+  }
+}
